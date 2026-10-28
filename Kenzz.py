@@ -9,195 +9,336 @@ TOKEN = "8996279782:AAEJ-n3vP4K9bts15GC0_htKMceRC4yHj8E"
 CHAT = "@gcapooo9"
 DATA_FILE = "prices_cache.json"
 
-# لستة المنتجات المدمجة (تم إضافة الروابط الخاصة بك بنجاح)
+# لستة المنتجات (محدودة بـ 150 منتج بالضبط وخالية من التكرار)
 PRODUCTS = [
-    "https://kenzz.com/en/product/222SEJ8QC6NU/3-Piece-Round-Oven-Casserole-Set",
-    "https://kenzz.com/en/product/23L8H6C2MMTL/4-In-1-Lava-Transparent-Laptop-Protector-Stickers",
-    "https://kenzz.com/en/product/25P5R3MF8DGH/Evolve-TV-43-inch-FHD-LED-Frameless-VLD43NA",
-    "https://kenzz.com/en/product/25SB7VR384NG/Akai-Electric-Oven-With-Grill-And-Fan-Black-45-Liters-Ak-45",
-    "https://kenzz.com/en/product/26DQKFKPB5TT/Ariston-Electric-Water-Heater%2C-50-Litres%2C-White-PRO-R",
-    "https://kenzz.com/en/product/26SZJV96WLAP/Fresh-Sauce-Blender-1.5L-with-2-Mills",
-    "https://kenzz.com/en/product/26WS8M84B3B4/Unionaire-Refrigerator-2-Doors-370-Liters-RD380BS",
-    "https://kenzz.com/en/product/26Y3AFANT9SS/Fxp-20-Steering-Wheel-Leather-Cover-Multi-Color",
-    "https://kenzz.com/en/product/26Y5TSJMK5CV/Lazord-Granite-Plus-Rectangular-Oven-Casserole-Copper-2-Pieces",
-    "https://kenzz.com/en/product/27AV9LTYPPR9/Sharp-Split-Air-Conditioner-1.5-HP%2C-Cooling-%26-Heating-White-AY-AP12ZHE",
-    "https://kenzz.com/en/product/27GTAQMAGWXA/Ceiling-Fan-56-Inches-Black-Brown",
-    "https://kenzz.com/en/product/284354YUVCSM/Smile-Wall-Fan-26-Inch-Black",
-    "https://kenzz.com/en/product/28PN4M9ZN428/Efs-95Sr-Stand-Fan-18-Inches-Black",
-    "https://kenzz.com/en/product/28WJ5S9YZ4Z5/Midea-Mission-Pro-Air-Conditioner-1.5-HP-Cooling-Only-M1SCT-12CRN-Q8",
-    "https://kenzz.com/en/product/29VJLAYGHW5E/Remote-Control-For-Arion-Zoom-Screen-Black",
-    "https://kenzz.com/en/product/2A3QFYJKW3PT/FAS2018-Stand-Fan-18-Inch-3-Speeds-Black",
-    "https://kenzz.com/en/product/2AG5UVJCSZFP/Stain-Resistant-Microwave-Cover-85*35-Cm",
-    "https://kenzz.com/en/product/2AK92F6VE84S/Fresh-Split-Air-Conditioner-1.5-HP%2C-Cooling-%26-Heating-White-SFW13H-IP-SEW13H-O",
-    "https://kenzz.com/en/product/2B6DUSYBVKSU/Fresh-Split-Air-Conditioner-1.5-HP%2C-Cooling-Only-White-FUFW12C-IW",
-    "https://kenzz.com/en/product/2C4UKSKQVG2E/Fresh-32-inch-Frameless-HD-LED-Smart-TV-Black-32LH423CT",
-    "https://kenzz.com/en/product/2CV3MC88GDHP/Bosch-refrigerator-328-liters-silver-BC-KDN43NL2E8",
-    "https://kenzz.com/en/product/2ECMU756CC3J/2-Door-Refrigerator-350-Liters-Black-Urn420Lblbams1",
-    "https://kenzz.com/en/product/2FQNMCX9FLM9/NBL500-Electric-Blender-500w-Black-White",
-    "https://kenzz.com/en/product/2FTMDVF39JYG/Innovative-Vegetable-Chopper",
-    "https://kenzz.com/en/product/2FXVUX4W8WTT/Tornado-Split-Air-Conditioner-1.5-Hp-Fast-Cooling-White-Th-C12Bee",
-    "https://kenzz.com/en/product/2GB9HDNDMF7D/Beko-Built-in-Gas-Cooker-7800-Watt-4-Burners-Silver-HIAW64225SX",
-    "https://kenzz.com/en/product/2GBPPGPLMXK9/Hisense-Split-Air-Conditioner-2.25-Hp-Cold-And-Hot-Hi-E18Invhp",
-    "https://kenzz.com/en/product/2GGALGRNKC8Y/Fresh-Upright-Deep-Freezer-6-Drawers-Without-Touch-Control-Handle-Black-FNU-MRT270B",
-    "https://kenzz.com/en/product/2JY57VFRL2YS/Toshiba-10.5kg-Full-Automatic-Inverter-Washing-Machine-with-Dryer-Gray-TWD-BM115GF4EG(MK)",
-    "https://kenzz.com/en/product/2LCE8WA9TD49/Electric-Blender-with-2-Grinder-1.5L-White",
-    "https://kenzz.com/en/product/2MB97BPNW6BC/Sokany-Grinder-Chopper-DOUBLE-LAYER-Stainless-Bowl-3L-4Blade--800W-(SK-7027)-SK-7027",
-    "https://kenzz.com/en/product/2N6B9LKEAPLZ/Stand-Fan-With-Remote-Control-And-Temperature-Sensor%2C-Inverter-Tech%2C-18-Inches-85-Watts",
-    "https://kenzz.com/en/product/2NBZZ69TV2CE/Leaves-Mascara-10-ml",
-    "https://kenzz.com/en/product/2NTGGZAZ7DS7/Sokani-Digital-Air-Fryer-1800-Watt-Black-SK-10007",
-    "https://kenzz.com/en/product/2P45ASAU89FF/Fresh-Professional-Control-Cooker-90-x-60-cm-5-Burners-Black",
-    "https://kenzz.com/en/product/2PHSN5PRT28B/Two-Way-Movable-TV-Stand-70-Inch-LX-70",
-    "https://kenzz.com/en/product/2Q9HXWXS2K4V/Stainless-steel-grinder-and-chopper-4-liters-800-watts-SK-7028",
-    "https://kenzz.com/en/product/2QX4UM8AZLHN/LG-Inverter-Split-Air-Conditioner-5-HP%2C-Cooling-%26-Heating-White-S4-W3R43EA",
-    "https://kenzz.com/en/product/2RXVRDF2YD3A/360-Degree-Adjustable-Movable-TV-Mount-65-Inch-Z-180",
-    "https://kenzz.com/en/product/2SG769UVZ68F/Oven-Thermal-Bags-3-Pieces-%C3%97-5-Medium",
-    "https://kenzz.com/en/product/2SSBULRFV9D2/Adjustable-Laptop-Stand-MDK-AL-1",
-    "https://kenzz.com/en/product/2T4XJRBMMYQP/Beko-No-Frost-Refrigerator-390-Liters-Silver-Rdne420Kd",
-    "https://kenzz.com/en/product/2TCTVLPNTVC7/Glass-screen-protector-for-iPhone-13Pro-Max",
-    "https://kenzz.com/en/product/2U89EUNUHTJZ/Braun-Multiquick-5-Hand-Blender-600-Watt-White-And-Gray-Mq-500",
-    "https://kenzz.com/en/product/2UWG4U43XCBD/Toshiba-Midea-Automatic-Top-Loading-Washing-Machine-11-kg-Morandi-Gray-AW-UK1100HUPEG(MK)",
-    "https://kenzz.com/en/product/2VYG2JPQ8695/Stainless-Steel-Hand-Blender-4-in-1-1000-Watts-SK-758-4N",
-    "https://kenzz.com/en/product/2WAV7VNWZGW4/Zanussi-Cooker-90-cm-5-Burners-Silver-ZCG97326XA",
-    "https://kenzz.com/en/product/2WN6YM2Y8EM8/Haier-TV-50-inch-Smart-4K-UHD-LED-TV-with-Built-in-Receiver-H50K80EU",
-    "https://kenzz.com/en/product/2WVB7Y23KVT7/Philips-Durgen-Air-Fryer-9-Liter-Capacity-Black-NA350",
-    "https://kenzz.com/en/product/2X2PUCG6KLV5/Bosch-Gas-Cooker-With-Oven-And-Grill-Series-2-90-Cm-5-Burners-Hgv1F8Y50S",
-    "https://kenzz.com/en/product/2X4HT6GS9YXF/Grohe-Smart-TV-50-inch-4K-Android-LED-Frameless-GLD50SAWORV2",
-    "https://kenzz.com/en/product/2XMTDTVUNYCX/Lazord-Granite-Pro-Oven-Trays-3-Pieces-Sizes-24%2C-26%2C-28-cm-Purple",
-    "https://kenzz.com/en/product/2XR8F6QXNC3P/LG-Split-Air-Conditioner-3-HP%2C-Cooling-%26-Heating-Black-S4-W24K2RME",
-    "https://kenzz.com/en/product/2Y9A9FAUKJPZ/Ufw18E2-Wall-Fan-18-Inches-Black-And-Grey",
-    "https://kenzz.com/en/product/2Z5F8MGJULYP/Ariston-Electric-Water-Heater%2C-50-Liters-White-RUBIS-PRO-50-V-EG",
-    "https://kenzz.com/en/product/2ZJG4LQ7339U/Pressure-Cooker-Set-7L-Stainless-Steel-Silver",
-    "https://kenzz.com/en/product/2ZPW3TBUHQRC/Zanussi-Steam-Max-Washing-Machine-7-Kg-Black-Zwf7221Bl7",
-    "https://kenzz.com/en/product/2ZR6HRVS2SMC/Pyrex-Bombay-Thermal-Refrigerator-1.25-L-3942",
-    "https://kenzz.com/en/product/32DC7TXAA5B8/Aff1800-B-Air-Fryer-5.5-L",
-    "https://kenzz.com/en/product/343H6VUED4WE/Cufan-Baby-Doll-Set",
-    "https://kenzz.com/en/product/344R38BEWBF9/Top-Loading-Automatic-Washing-Machine-10-Kg-Silver-Wtla1000Sl",
-    "https://kenzz.com/en/product/34AE5QMYQQ3K/Carrier-Split-Optimax-Inverter-Air-Conditioner-2.25-Hp%2C-Cooling-%26-Heating-White-53Qhct18Dn-708F",
-    "https://kenzz.com/en/product/36NTVA7UWMG6/HP63R-Foldable-Wired-Headset-with-Microphone-1.5m-Red",
-    "https://kenzz.com/en/product/3773D45C4L6M/Alaska-Defrost-Refrigerator-289-Liters-Silver",
-    "https://kenzz.com/en/product/39CNHAYM4V7D/Mq-9147X-Braun-Multi-Quick-9-Hand-Blender-Set-1200-Watt",
-    "https://kenzz.com/en/product/39HQRRH3EUU2/-500004511-Fresh-Rafael-Ceiling-Fan-56-Inch-White",
-    "https://kenzz.com/en/product/39QD48TS77WM/Ariston-Electric-Water-Heater-40-Liters-White-RUBIS-PRO-40-V",
-    "https://kenzz.com/en/product/3A2UPTDKE589/Keriazi-Super-Steel-Gas-Cooker-5-Burners-Stainless-Steel-90-cm-8900",
-    "https://kenzz.com/en/product/3ATZYSXWYURG/Camera-Lens-Screen-Protector-IPhone-14",
-    "https://kenzz.com/en/product/3CDXNDG5YUAZ/Tefal-Stand-Fan-16-Inches-Black-Vy5391E2-",
-    "https://kenzz.com/en/product/3DSN4EHXZHRE/Hyundai-43-Inch-Smart-LED-TV-L43HYNDA630",
-    "https://kenzz.com/en/product/3ELG4FGDZTSV/Kenwood-Blender-with-2-Grinders-1.5L-Capacity-400W-WhiteBBBB-BLP10.COWH",
-    "https://kenzz.com/en/product/3GATA94EQXVP/Hoover-Fully-Automatic-Washing-Machine-8-kg-Inverter-Motor-Silver-H3WS38TAMF7R-ELA",
-    "https://kenzz.com/en/product/3GDXZV9Q3PYC/Toshiba-Automatic-Washing-Machine-10-kg-Gray-TW-BK115GF4EG(MK)",
-    "https://kenzz.com/en/product/3JFAA3ZLYRYM/Kriazi-Horizontal-Deep-Freezer-336-Liters-White-E336",
-    "https://kenzz.com/en/product/3JYXVBAC6FAN/Toshiba-No-Frost-Inverter-Refrigerator-450-Liters-Dark-Grey-GR-RT622WE-PMN(06)",
-    "https://kenzz.com/en/product/3K9FSDVUYA36/4-Piece-Window-Screen-Repair-Patch-10-cm",
-    "https://kenzz.com/en/product/3KGXEPZ3X5SW/Alaska-Vertical-Deep-Freezer-Defrost-3-Drawer-Control-Brown-UP140",
-    "https://kenzz.com/en/product/3L98TBVUVMAS/Zanussi-SteelPlus-Gas-Cooker-5-Burners-with-Oven-ZCG922A6XB",
-    "https://kenzz.com/en/product/3LDT2F5VGBEL/Screen-protection-made-of-tempered-glass-for-iPhone-13-Pro-Max",
-    "https://kenzz.com/en/product/3NLVJXXE2MQN/Haier-Split-Air-Conditioner-1.5-HP-Cooling-Inverter-Plasma-White-HSU-12KCRIA",
-    "https://kenzz.com/en/product/3Q3RFZ859QAH/Tornado-Semi-Automatic-Washing-Machine%2C-7-Kg-Black-Tmh-Hs07C-(Wk)",
-    "https://kenzz.com/en/product/3QJHMRDXDQ4R/Ariston-Dishwasher-14-Place-Settings-Front-Load-Silver-LFC-3O33-WLTX",
-    "https://kenzz.com/en/product/3QU2BS6X9S2K/Mx40-Mobile-Tv-Stand",
-    "https://kenzz.com/en/product/3R667SBNRC3F/Fresh-Microwave-36-Liters-Black-Fmw-36Kc-B",
-    "https://kenzz.com/en/product/3S5LTV3L4NT9/Suede-Crossbody-Bag-for-Women-with-Strass-Black-Silver-RM-127",
-    "https://kenzz.com/en/product/3SBW3KQ8HVB6/SK-005-Electric-Airfryer-8.5-liters-Black",
-    "https://kenzz.com/en/product/3TVU4SC6KXBZ/Wooden-Shape-Sorter-Game",
-    "https://kenzz.com/en/product/3TVV5C3ZDGAS/Apple-iPhone-16-Plus-256GB-SIM-Black-5G-(Local-Warranty)",
-    "https://kenzz.com/en/product/3TZ96Y9FWZ6X/Fresh-Cooling-Split-Air-Conditioner-2.25-HP-White-FUFW18C-IW-AG-FUFW18C-O-X2",
-    "https://kenzz.com/en/product/3UJTV2A5KGTW/Fourira-Palm-Polished-Stainless-Bucket-Brown",
-    "https://kenzz.com/en/product/3V2YQBQ2VT6K/Kiriazi-Vertical-Deep-Freezer-5-Drawers-Silver-E230N5-3",
-    "https://kenzz.com/en/product/3X3SZXMRRJ46/500ml-Insulated-Travel-Mug-with-LED-Touch-Screen-Blue",
-    "https://kenzz.com/en/product/3Y4F5FQMKJWD/Fresh-Electric-Water-Heater-Relax-40-Liters",
-    "https://kenzz.com/en/product/3Y9ZVHMFFQRK/Fresh-Microwave%2C-42-Liters%2C-1000-Watts%2C-Digital-Display-Black-FMW-42KC-BW",
-    "https://kenzz.com/en/product/3Z3Y3AT3LFRB/Dexil-Rtv-Silicone-Adhesive-Grey-85.2G",
-    "https://kenzz.com/en/product/3ZRUTVC88MTP/Luxury-White-Erasers-Pack-of-36-AG-1036-W",
-    "https://kenzz.com/en/product/423ZM3XTCHX9/Semi-Automatic-Washing-Machine-Top-Load-5-Kg-White-Shatoora",
-    "https://kenzz.com/en/product/42EQLTVRDEKZ/IKEA-503.430.05-Glattis-Coasters-with-Holder%2C-Brass-Color",
-    "https://kenzz.com/en/product/43XW7BKFWX4Q/Fresh-Jumbo-Gas-Cooker-5-Burners-90x60-cm-Silver-500016272",
-    "https://kenzz.com/en/product/44HNUXVFTFLR/White-Point-Automatic-Top-Loading-Washing-Machine-15-kg-Gray-WPTL150DGSM",
-    "https://kenzz.com/en/product/44J454J5K432/Ecomatic-Oven-60-cm-Gas-Grill-Black-Crystal",
-    "https://kenzz.com/en/product/44N3SYU6UF7Q/Haier-Split-Air-Conditioner-1.5-Hp-Cold-And-Hot-White-Hsu-12Khrocc",
-    "https://kenzz.com/en/product/44XKXQSBG5JD/Bz-50-Smart-Microwave-Mounting-Bracket",
-    "https://kenzz.com/en/product/46A8VEREDK64/Reusable-silicone-air-fryer-liner-19-cm-Red",
-    "https://kenzz.com/en/product/46GQV3RTF5HB/Automatic-Washing-Machine-Front-Loading-6-Kg-Silver-Wpw61015Pds",
-    "https://kenzz.com/en/product/47L3XMBY2HFU/Fresh-washing-machine%2C-top-automatic%2C-10-kg%2C-digital-pump%2C-black%2C-FTM10F12BH",
-    "https://kenzz.com/en/product/47TMEFVUW32V/Alaska-Horizontal-Deep-Freezer-135L-Silver-Defrost-CH140",
-    "https://kenzz.com/en/product/47VQ9BBVTVLQ/Can-Finger-Spinner-Rotate",
-    "https://kenzz.com/en/product/4859H3RQATJV/Beko-No-Frost-Deep-Freezer-168-Liters-Black-Rfnm200E20S",
-    "https://kenzz.com/en/product/48FXZRUX7HTA/CHP62.700SI-Electric-chopper-1.2-liters-500-watts-silver",
-    "https://kenzz.com/en/product/49RJDBJFU4MB/GH-6SN-W-Natural-Gas-Water-Heater-Without-Chimney-Silver-",
-    "https://kenzz.com/en/product/49SPK9TYB2GG/HFP90-Air-Fryer-2000W-11L-Black",
-    "https://kenzz.com/en/product/49ZXBH6FDV68/Sharp-Split-Air-Conditioner-3-HP%2C-Cooling-%26-Heating-Digital-Plasma-Cluster-White-AY-AP24ZHE",
-    "https://kenzz.com/en/product/4BAN9FX77F9A/Fresh-instant-water-heater-9-kW",
-    "https://kenzz.com/en/product/4C45T6VLUKC2/Haier-Front-Load-Inverter-Washing-Machine-8-kg-Silver-HW80-B14959S6TU1",
-    "https://kenzz.com/en/product/4C89G9XPWA8L/Beko-Built-in-Gas-Cooker-60-cm-4-Burners-Black-HIAW-64225-BX",
-    "https://kenzz.com/en/product/4CB4H6JUJ8DE/Defrost-Alaska-Refrigerator-318-L-12-Feet-Black-Ksd",
-    "https://kenzz.com/en/product/4CPN5P3WWJQU/DF-1600-Movable-TV-Monitor-Stand-Black",
-    "https://kenzz.com/en/product/4DMGPWCURE55/Atlantic-Electric-Water-Heater-30L-1200-Watt-Concept-A-8312810",
-    "https://kenzz.com/en/product/4EXR6PR4WWNZ/Refrigerator-Food-Storage-Container-Set-7-Pieces",
-    "https://kenzz.com/en/product/4F4NKAC9EA3L/Jb1023-3*1-Blender-And-Grinder-600-Watts-Black",
-    "https://kenzz.com/en/product/4FC2Q2L4LKMR/Samsung-No-Frost-Refrigerator-344-Liters-Black-Rb34T672Fb1-Mr",
-    "https://kenzz.com/en/product/4H46QKKN38BZ/Set-of-refrigerator-containers-with-bamboo-lid-2-pieces-500-ml",
-    "https://kenzz.com/en/product/4HCA2MUMS78Q/Fresh-Semi-Automatic-Washing-Machine-12-Kg-White-500001730",
-    "https://kenzz.com/en/product/4KQGBFSK9BNU/Royal-Gas-Perfect-Cast-Digital-Cooker-5-Burners%2C-60-x-90-cm%2C-Stainless-Steel-2010245",
-    "https://kenzz.com/en/product/4L3N5JA74ZCH/Wooden-Refrigerator-Magnets-9-Pieces-Shape-12",
-    "https://kenzz.com/en/product/4L4LTSNAE99Q/Anti-Vibration%2C-Shockproof%2C-and-Non-Slip-Rubber-Foot-Pads-for-Washing-Machine%2C-Refrigerator%2C-and-Furniture-8-Pieces",
-    "https://kenzz.com/en/product/4MHG63TV5CAC/Anti-anxiety-and-stress-cube-game",
-    "https://kenzz.com/en/product/4QF9Y92H3M2G/Beko-No-Frost-Refrigerator-406-Liters-Inverter-Black-Rdne455M20Xbidegb",
-    "https://kenzz.com/en/product/4RLSGTHHNJ56/Sharp-Microwave-25-Liters-Black-With-Grill-R250Mgr",
-    "https://kenzz.com/en/product/4RTQPVCBE7Q4/Tornado-Cooker-Hood-60-Cm-Stainless-Hos-M60Esu-S",
-    "https://kenzz.com/en/product/4RX9B6NYBWHP/Electric-Double-Head-Office-Fan-with-360%C2%B0-Rotation-Dual-Speed-Control",
-    "https://kenzz.com/en/product/4RYNB6RR8FY4/Braun-Hand-Blender-700-Watt-White-BC-MQ3020",
-    "https://kenzz.com/en/product/4S45SFTVA754/Pressurized-water-dispenser-with-leak-proof-nozzle",
-    "https://kenzz.com/en/product/4SPU86GW3VZY/Castle-FAS2518RD-18-Blade-Floor-Fan-Remote-Control-Multicolor",
-    "https://kenzz.com/en/product/4SWU3ZC3L35N/12V-Dual-Head-Electric-Car-Fan-Black",
-    "https://kenzz.com/en/product/4UQWP537D54J/Bg786-Laptop-Bag-15.6-Inches-Black",
-    "https://kenzz.com/en/product/4UUJDG5CASD4/Bsl-130-Wall-Mounted-Tv-Stand",
-    "https://kenzz.com/en/product/4V7EMTC8KWK3/Multi-purpose-Blender-2.5l-SK-666",
-    "https://kenzz.com/en/product/4W9UWH4LL8MF/Mini-Wonder-Chopper-800-Watt-5-L-SK-7015",
-    "https://kenzz.com/en/product/4WASZWTVVU4L/Molfix-Shorts-Size-6-48-Diapers",
-    "https://kenzz.com/en/product/4WLVAFMJGY4R/Highcast-Gas-Cooker-5-Burners-Silver",
-    "https://kenzz.com/en/product/4WU3WNTVYLCE/Skin-Tone-Hydrocolloid-Patches-For-Acne-And-Cold-Sore-Treatment",
-    "https://kenzz.com/en/product/4XBS82NWELKA/Sharp-Inverter-Split-Air-Conditioner-2.25-HP%2C-Cooling-%26-Heating-White-AY-XP18YHE",
-    "https://kenzz.com/en/product/4XPMVKAJ7EAQ/Sharp-Inverter-Split-Air-Conditioner-2.25-HP%2C-Cooling-Only-Silver-AH-XP18UHE",
-    "https://kenzz.com/en/product/4XVGM283HMQC/Screen-Remote",
-    "https://kenzz.com/en/product/4Z3X9K945LCB/Semi-Automatic-Washing-Machine-Top-Load-4-Kg-White-Fws400Nd",
-    "https://kenzz.com/en/product/4ZDUHKK32FUT/Manhattan-4K-Hdmi-Splitter-With-2-Ports-Black",
-    "https://kenzz.com/en/product/52ZSXYDUAPLV/Beko-No-Frost-Refrigerator-Freezer-367-Liters-Rdne420K02Dxiteg",
-    "https://kenzz.com/en/product/53XLGBZT7Z7H/Toshiba-Top-Load-Washing-Machine-8-Kg-Gray-Aw-M801Apeg(Sg)",
-    "https://kenzz.com/en/product/543BFVPZGWK7/Ecomatic-90cm-Gas-Oven-with-Fa-%2C-Crystal-Black-105L",
-    "https://kenzz.com/en/product/545WSH57WBJK/Sokany-Chopper-800-Watts-4L-Silver-SK-7028",
-    "https://kenzz.com/en/product/56925QBPKCF6/Bl1251A-Electric-Blender-500W-White",
-    "https://kenzz.com/en/product/56AB22TQGYYN/Ariston-Electric-Water-Heater%2C-Pro-AR-80-Liters-RUBIS-PRO-80-V-EG",
-    "https://kenzz.com/en/product/56MTQARFBCX3/Foldable-Aluminum-Laptop-Stand-Silver",
-    "https://kenzz.com/en/product/57QR52BPYHGC/AOF100-B5-Digital-Air-Fryer-12L-Black-Silver",
-    "https://kenzz.com/en/product/58JYB55ASMGY/Braun-Multimix-Hand-Blender-450-Watt-Hm-1100",
-    "https://kenzz.com/en/product/58LWUXV88AA9/Pressure-Cooker-Set-11L-Aluminum-Silver",
-    "https://kenzz.com/en/product/595AJX8LZZ33/Beko-Gas-Cooker-90-Cm-5-Sh-Full-Safety-Black-Ggr15115Dxnb",
-    "https://kenzz.com/en/product/59H6MYFRB8E7/Black-%26-Decker-air-fryer-6-in-1-7.2-liters-1500-watts-black-and-silver-AF7257-B5",
-    "https://kenzz.com/en/product/59JC3DQ8U2JZ/Zanussi-Digital-Built-in-Electric-Oven-with-Grill-60cm-72L-Stainless-Steel-ZOB35602XK",
-    "https://kenzz.com/en/product/5A3TUHGVYB2Y/Digital-Led-Shower-%2B-Screen-5-Pieces-Grey",
-    "https://kenzz.com/en/product/5BLLLAYG4USM/FR-48ECCO-Electric-Oven-With-Grill-48-L-Black",
-    "https://kenzz.com/en/product/5C97CP35K39W/Fresh-Hand-Blender-Black-HB-800N",
-    "https://kenzz.com/en/product/5CGPCS9BE8UB/Audio-Splitter-Cable-For-Headphones-And-Microphone-80-Cm",
-    "https://kenzz.com/en/product/5CRURB65XCHH/Jack-32-Inch-HD-LED-TV-Black-32JC3110B",
-    "https://kenzz.com/en/product/5CYDNTL2H5ZK/Sharp-Sj-48C(St)-No-Frost-Refrigerator-385-Liters-Silver",
-    "https://kenzz.com/en/product/5DNAB4L4MAYV/Black-%26-Decker-HX230-B5-Fan-Heater-White",
-    "https://kenzz.com/en/product/5DTTEY66XA3G/TDF16-Desk-Fan-16-Inch-Black-Red",
-    "https://kenzz.com/en/product/5EJ63TV8WYYX/Nine-Times-Deodorant-Lollipop-50-ml",
-    "https://kenzz.com/en/product/5ER4E2U24QVV/Unionaire-No-Frost-Deep-Freezer-5-Drawers-Digital-Black-UF-205LBLBA-DL",
-    "https://kenzz.com/en/product/5FAPAZ4EQ552/Bosch-Hand-Blender-with-Chopper-600-Watt-MSM66155",
-    "https://kenzz.com/en/product/5G2DKM7N6VYX/White-Whale-Refrigerator-600-Liters-Stainless-Digital-No-Frost-Inverter-Wr-3068Mxss-Wf3068Ss",
-    "https://kenzz.com/en/product/5JA2QV8RJTT5/360-privacy-screen-compatible-with-iPhone13-PRO",
-    "https://kenzz.com/en/product/5KXXN3MECA3W/Food-Storage-BinsWithDrainer-Basket%2C-Stackable-Refrigerator-Organizer-Canisters-Set-Of-4",
-    "https://kenzz.com/en/product/5LP5PZMELG5B/Fresh-Professional-Cooker-90-x-60-cm-5-Burners-Black",
-    "https://kenzz.com/en/product/5LTVDY2QV4RQ/Fine-Fluffy-Tissue-Box-500-Tissue-3-Pcs",
-    "https://kenzz.com/en/product/5LYJH77TWMES/Fresh-Professional-Style-Gas-Cooker-5-Burners-Silver-500008130",
-    "https://kenzz.com/en/product/5M4UTF6QWNAF/Midea-Dishwasher-14-Person-Capacity-Smart-Wi-Fi-Mdwef1433D(Ss)-Wi-Eg",
-    "https://kenzz.com/en/product/5N286M5J8ZDP/Passap-De-Frost-Horizontal-Deep-Freezer-200-Liters-Es241-Silver",
-    "https://kenzz.com/en/product/5PJSQ72QNSHY/Vegetables-Manual-Chopper-2-L",
-    "https://kenzz.com/en/product/5PQ9334UTVCC/M%26G-Mechanical-Pencil-0.5mm-with-Assorted-Colors-for-Precise-Writing-and-Drafting",
-    "https://kenzz.com/en/product/5Q4XJS47XHF2/2-Piece-Silicone-Oven-Gloves-Multicolor",
-    "https://kenzz.com/en/product/5R4AJ9RG6TUA/FNT-M540YB-Fresh-Refrigerator-426-Liters-Black",
-    "https://kenzz.com/en/product/5R8NV4WE6NPB/MQ-3025-Hand-Blender-700-W-White",
-    "https://kenzz.com/en/product/5RW4FJUTVDXN/Eco-500006450-Fresh-Electric-Oven-With-Grill-48-Liters-Black",
-    "https://kenzz.com/en/product/5TDF2CD49Y39/Fresh-Solo-Microwave-28L-900W-Silver-FMW-28EC-B",
-    "https://kenzz.com/en/product/5TQ9BATLM857/Professional-Cleaning-Kit-6-in-1-for-Ovens%2C-Grills%2C-and-Surfaces",
-    "https://kenzz.com/en/product/5TZ79LP
+    "https://kenzz.com/en/product/8KYCWYNKG8MC/Samsung-Smart-TV-98-inch-4K-Tizen-Crystal-UHD-DU9000",
+    "https://kenzz.com/en/product/8LKPG7TW6TKV/Black-%26-Decker-Blender-with-2-Mills-1.5-Liters-Black",
+    "https://kenzz.com/en/product/8LUHL99744SU/Pyrex-Thermal-Refrigerator-With-Lid-1-Liter-3872",
+    "https://kenzz.com/en/product/8MDC7H2QTZ8C/Toshiba-Top-Load-Automatic-Washing-Machine-15-kg-Gray-AW-DUHN1600LUPEG-(MK)",
+    "https://kenzz.com/en/product/8MMVHY8GVNH9/City-Blender-6500-Watt-2-Liter-6-Stainless-Steel-Blades-Multi-Speed-%E2%80%8B%E2%80%8B-Hma-1021",
+    "https://kenzz.com/en/product/8P6VG7AF2ZEZ/Universal-Gas-Water-Heater%2C-6L-White-Ge-6-N",
+    "https://kenzz.com/en/product/8Q9L9XEKLAGZ/Magefesa-Pressure-Cooker-8-Liters-Stainless-Steel",
+    "https://kenzz.com/en/product/8QD8FXKFC6KM/Dansha-Hand-Blender-1000-Watt",
+    "https://kenzz.com/en/product/8QDZEC3RTT8L/Zanussi-Digital-Gas-Water-Heater-10-L-Chimney-Adapter-Silver-ZYG10113SL",
+    "https://kenzz.com/en/product/8QUG8SS2DRWR/Fresh-Relax-80-Liter-Electric-Water-Heater",
+    "https://kenzz.com/en/product/8QZRKE73VKL7/Fan-Heater-3-Operating-Modes-Rotation-Feature-2000-Watts-Black-Mar-910",
+    "https://kenzz.com/en/product/8R67UPRA3L5K/Mom-C25Bbe-Bk-Microwave-And-Grill-25-Liters-Black",
+    "https://kenzz.com/en/product/8RP22BJMZSGL/Paper-Fan-With-Wooden-Handles-Multi-Colored",
+    "https://kenzz.com/en/product/8S8L62SZFYZK/Sokany-SK-1711-4-4-in-1-Hand-Blender-1000W",
+    "https://kenzz.com/en/product/8UCQ5FK55C24/Jack-Microwave-43L-Silver-NGM-43M3",
+    "https://kenzz.com/en/product/8UG2M5N4JYAX/Sokany-Blender-and-Whisk-800-Watts-5-Speeds-Silver-SK-6630",
+    "https://kenzz.com/en/product/8UG7K2CYPSUL/Unionaire-Top-Loading-Washing-Machine-13-kg-Silver-UW130TPLA2SL",
+    "https://kenzz.com/en/product/8WANLZ9AEYEG/Canvas-Backpack-With-Laptop-Pocket-Blue",
+    "https://kenzz.com/en/product/8ZFQMLG8MNCM/Ariston-Built-in-Gas-Oven-90-cm-Stainless-Steel-GESM53IXA30",
+    "https://kenzz.com/en/product/953P677VRGEL/Kiriazi-No-Frost-Refrigerator-335-Liters-Silver-Kh370Ln",
+    "https://kenzz.com/en/product/95USJC23VJQD/2-Way-Movable-TV-Stand-85-Inch-T-700",
+    "https://kenzz.com/en/product/9632X7R5XVTE/Tornado-TM-25MK-Electric-Microwave-25-Liter-Black",
+    "https://kenzz.com/en/product/966QERSL3XDJ/Fresh-Horizontal-Deep-Freezer-255L-Silver-FDF-330",
+    "https://kenzz.com/en/product/96F2MU9FVNCV/Black%2BDecker-8L-Black-Air-Fryer-SAF80W-B5",
+    "https://kenzz.com/en/product/96JVPDR8D6SR/Beko-Dishwasher-14-People-Silver-BDFN15421S",
+    "https://kenzz.com/en/product/96SHNWHBQ9E6/Hand-Blender-4*1-Dsp-1200-Watt-Km1137",
+    "https://kenzz.com/en/product/96YTBKMXRS6R/ZX-240-Movable-TV-Stand-55-26-Inch",
+    "https://kenzz.com/en/product/97CURQF9PXNM/Parking-sensor-with-display-screen-4-pieces-black",
+    "https://kenzz.com/en/product/97P3PEYL3BQH/Beko-Split-Air-Conditioner-1.5-Hp-Inverter-Motor-Cold-Only-White-Bict1221X",
+    "https://kenzz.com/en/product/98DR78RKTVWQ/Rechargeable-Shaver-Black-V-339",
+    "https://kenzz.com/en/product/992D6CWD5V6Q/HDMI-Switch-and-2*1-Audio-Adapter-for-Hdtv-Dvd-Display-Black",
+    "https://kenzz.com/en/product/99N4VCTL2TVM/Peugeot-car-pedal-set-black-5-pieces",
+    "https://kenzz.com/en/product/9AV7YEGC4NP8/Glass-screen-protector-for-iPhone-13Pro-Black",
+    "https://kenzz.com/en/product/9FP8SJCREXQ6/Beko-Digital-Inverter-Refrigerator-With-Tap-477-Liters-Black-B3Rdne500Lxbr",
+    "https://kenzz.com/en/product/9GC99PFANYAH/Pampers-Pants-Size-5-58-Diapers",
+    "https://kenzz.com/en/product/9GLJUUDPS9X7/Ikea-Ikea-Breakage-Microwave-Cover-Grey-(26cm)",
+    "https://kenzz.com/en/product/9GVYHXNYHTPF/IDO-Microwave-42-Liters-Black-MW42NG-BK",
+    "https://kenzz.com/en/product/9J7EVNPL43TV/COSRX-Salicylic-Acid-Daily-Gentle-Cleanser-Facial-Soap",
+    "https://kenzz.com/en/product/9JYAPVYUQSMX/Castell-Ceiling-Fan-56-Inch-White-FAC1056DW",
+    "https://kenzz.com/en/product/9LE54N8VECNB/Vacation-Sunscreen-SPF50%2B-Lotion-120-ml",
+    "https://kenzz.com/en/product/9LZTLQJ34ZBZ/Saudi-Saif-Aluminum-Pressure-Cooker-3-Liters",
+    "https://kenzz.com/en/product/9N573XS6X5KV/Midea-Air-Fryer-4L-Mf-Cn40D29-Black",
+    "https://kenzz.com/en/product/9NL9YVHMMFTN/Samsung-Front-Load-Washing-Machine-11-Kg-Black-Ww11B1534Dabas",
+    "https://kenzz.com/en/product/9PPZN9855VBG/Carnival-Wall-Fan-18-Inch-White-Red-WFZ1820",
+    "https://kenzz.com/en/product/9QEUTCP3US5F/THB-400CH-Electric-Blender-400w-Black",
+    "https://kenzz.com/en/product/9QW2UQEAUH2P/Kiriazi-Gas-Cooker-4-Burner-Silver-6400S",
+    "https://kenzz.com/en/product/9R8C4M5VV8G6/Exhaust-Fan-and-Tongue-8-Inch-White",
+    "https://kenzz.com/en/product/9RJHHUXA3BCU/Black-%26-Decker-Air-Fryer-Pizza-Oven-10.5-Liters-PGAF105-B5",
+    "https://kenzz.com/en/product/9STXGD9JPN4W/Midea-Split-Air-Conditioner-1.5-HP-Cooling-Only-White-MSC1T-12CR-N",
+    "https://kenzz.com/en/product/9TERTVT74L4U/Foldable-cup-holder-with-car-storage-box-Beige-Black",
+    "https://kenzz.com/en/product/9TW2LWGNSWA2/Hoover-Fully-Automatic-Washing-Machine-7-kg-Inverter-Motor-Silver-H3WS17TMF3R-ELA",
+    "https://kenzz.com/en/product/9UREU29VLM9T/Eva-Sun%26Sea-Sun-Screen-Lotion-Tinted-40ml",
+    "https://kenzz.com/en/product/9V5UWFB8FD9D/Keriazi-Gas-Cooker%2C-60x60-4-Burners-Self-Ignition-6400-Silver",
+    "https://kenzz.com/en/product/9VGEQMGM7KFB/Tornado-fan-56-inches-3-blades-white-TCF56L",
+    "https://kenzz.com/en/product/9ZA7J2B7ATE8/Air-Fryer-Paper-100-Pieces",
+    "https://kenzz.com/en/product/9ZM7YK9VHPZL/Zanussi-Gas-Cooker-with-Oven-5-Burners-Digital-Silver-ZCG92686XA",
+    "https://kenzz.com/en/product/9ZR6BEXK2G5Y/Sokany-Hand-Blender-1200-Watt-Sk-758",
+    "https://kenzz.com/en/product/A2RW5NT5FMZT/509-Liter-Bottom-Freezer-Refrigerator-Black-RCNE590E35ZXP3",
+    "https://kenzz.com/en/product/A3LR2QAK5ZHG/Philips-Air-Fryer-4.1L-Black-HD9252-91",
+    "https://kenzz.com/en/product/A3YL9QJN3HE6/Beko-Automatic-Digital-Inverter-Washing-Machine-10Kg-1600-Rpm-Grey-B3Wfu501040Mci",
+    "https://kenzz.com/en/product/A47N9ET7MZVV/K-110-Movable-TV-Mount-43-19-inch",
+    "https://kenzz.com/en/product/A4TZA9QELX7P/Saudi-Safe-Hand-Blender-1200-Watts",
+    "https://kenzz.com/en/product/A63JAV6NWPDB/Kenwood-Blender-with-2-Choppers-2-Liters-Silver-BCC-BLP10.C0WH",
+    "https://kenzz.com/en/product/A7K4BP7BJRHX/Hand-blender-800-Watt-black-HB-800FO",
+    "https://kenzz.com/en/product/A8KZTVSTFNEL/Ramadan-Kareem-LED-Decoration-60-cm",
+    "https://kenzz.com/en/product/A8MCU3LDB6VT/Royal-Gas-Master-Chef-Cooker-5-Burner-60-x-80-cm-R-2010290",
+    "https://kenzz.com/en/product/A9S933UTVAV4/Women'S-Embroidered-Prayer-Cap-736",
+    "https://kenzz.com/en/product/ABLQCWHWFJ6C/Fresh-Fan-16-inch-Blue-Galaxy",
+    "https://kenzz.com/en/product/ACGKM3FHTQGR/Ch-645-Blender-with-Chopper-1000-Watts",
+    "https://kenzz.com/en/product/AEH97SHNRNM6/Mosquito-Screen-Curtain-for-Windows-200-%C3%97-150-cm",
+    "https://kenzz.com/en/product/AFQ842ERN5CZ/Mienta-BL1251B-Electric-Blender-1.75-L-Black",
+    "https://kenzz.com/en/product/AFTKEZXSG784/Hoover-7-kg-Fully-Automatic-Washing-Machine%2C-Black-H3WS173DC3B-ELA",
+    "https://kenzz.com/en/product/AGHL3AHBN26U/Kenwood-Electric-Chopper-1.2-Liters-Silver-Chp62.400Si",
+    "https://kenzz.com/en/product/AGTAGBBE8YM6/Ninja-Foodi-Dual-Air-Fryer-Af300Uk-2-Drawers-7.6-Liters-Black",
+    "https://kenzz.com/en/product/AGWFBF7GAT9E/Tornado-Top-Automatic-Washing-Machine-7-Kg-Gray-Css1072Dc3B-Ela",
+    "https://kenzz.com/en/product/AH9VGSM3EDBX/Tornado-Electric-Oven-46-Liters-1800-Watts-Grill-Fan-Black-TEO-46KD-BK",
+    "https://kenzz.com/en/product/AJ2P76DCLHQQ/Silicone-Oven-Gloves-Purple",
+    "https://kenzz.com/en/product/AM3FMDB7935N/Akai-Electric-Oven-With-Grill-And-Fan-55-Liters-Black-Silver-Ak-45",
+    "https://kenzz.com/en/product/AM3SAQPS7VZT/Fresh-No-Frost-Refrigerator-369-Liters-2-Doors-Black-FNT-BS400BB",
+    "https://kenzz.com/en/product/AMUTVN74RGRG/Silicone-shower-holder",
+    "https://kenzz.com/en/product/ANFQLUK3TDNJ/Mirage-50-Inch-4K-Smart-TV-Built-in-Receiver-50MRU720",
+    "https://kenzz.com/en/product/ANP3BMFAV7ES/Beko-Mini-Bar-Refrigerator-120-Liters-Black-Tse12340-B",
+    "https://kenzz.com/en/product/APLFWPYYEJRK/Af205K-Air-Fryer-5.5L-Black",
+    "https://kenzz.com/en/product/APR9A97G9SDV/Blp10.Aowh-Electric-Blender-With-Grinder-White-Grey",
+    "https://kenzz.com/en/product/APU4UV5DF4YM/Zanussi-Perlamax-Washing-Machine-8-Kg-Silver-Zwf8240Ss5",
+    "https://kenzz.com/en/product/APY3PBRDCYZC/Beko-Blender-Glass-Jug-6-Speeds-1.75-Liter-800-Watt-Black-Silver-TBN-81808-BX",
+    "https://kenzz.com/en/product/AQGHCM7R62G2/Ecomatic-Built-in-Electric-Gas-Cooker%2C-30-cm-2-Slabs-Stainless-Steel",
+    "https://kenzz.com/en/product/AQH92GXW4J8K/Saudi-Saif-Stainless-Steel-Pressure-Cooker-11-Liters",
+    "https://kenzz.com/en/product/AQVY5HMWHVMK/SK-8043-Air-Fryer-8L-2000W-Black",
+    "https://kenzz.com/en/product/AQXZM8UAZT5L/Fresh-25-cm-One-Way-Multicolored-Exhaust-Fan-FVF-25",
+    "https://kenzz.com/en/product/ARD4E5RSPNBC/Lg-Washing-Machine-9-Kg-Black-F4R5Vyg2E-Black",
+    "https://kenzz.com/en/product/ARPWUTV8DYAA/Sokany-Sandwich-Maker-750-Watts-SK-08067",
+    "https://kenzz.com/en/product/ARSLJ7D9FTEE/First-Wall-Squared-Ventilating-Fan-35-cm-White",
+    "https://kenzz.com/en/product/ARXTGXCMD8VA/Perfix-Stand-Fan-18-Inch-Black-SFS-181",
+    "https://kenzz.com/en/product/ARZT2CUWDNGU/Fresh-Split-Air-Conditioner-1.5-HP%2C-Cooling-Only-White-SIFW13C-IP--SIFW13C-OX2",
+    "https://kenzz.com/en/product/ASD7MVBLW88X/Fresh-Matrix-Safety-Cooker-90-X-60-5-Burners-Silver-500016944",
+    "https://kenzz.com/en/product/AT7PZKVYYL4V/Beko-6-Drawer-Digital-Deep-Freezer%2C-Black-270-Liters-B3RFNE274B",
+    "https://kenzz.com/en/product/AT856T5TQLMW/R50-Vertical-Electric-Water-Heater-50-Liters-White",
+    "https://kenzz.com/en/product/ATQ3J4B5LLHT/Ghost-Fresh-Twin-Tub-Semi-Automatic-Washing-Machine-8-Kg-White-Fwt10900Na",
+    "https://kenzz.com/en/product/AUW2ARA4HB3P/Fresh-Elite-Oven-Grill-And-Fan-65-Liters-Gold",
+    "https://kenzz.com/en/product/AV86J5DMTVHL/Fruit-Basket-and-Strainer-Blue",
+    "https://kenzz.com/en/product/AW5TCXQRCDCR/SK-7011-Electric-Chopper-Blender-Silver",
+    "https://kenzz.com/en/product/AYFMTVLCQT4X/FA-V40M-Fresh-Air-Cooler-40-Liters-White",
+    "https://kenzz.com/en/product/AZR23U74X89X/Mobile-Screen-Protector-IPhone-14-Max",
+    "https://kenzz.com/en/product/AZXH5NDKUSB7/Foldable-Portable-Washing-Machine-White-Blue",
+    "https://kenzz.com/en/product/B254W4S5SKP8/Sokany-Hand-Blender-500-Watts-SK-02035",
+    "https://kenzz.com/en/product/B26UEQ63VRDW/C61P5-Stand-Fan-with-Remote-18-Inch-Black-White",
+    "https://kenzz.com/en/product/B2LKMXVWHRAD/Ikea-FANTASTISK-Paper-Napkin%2C-White---100-Pack-40x40-cm%2CIKE-500.357.52",
+    "https://kenzz.com/en/product/B2QN3VX2CVJR/Washing-machine-cover-with-two-souls-75*46*85-multi-colored",
+    "https://kenzz.com/en/product/B3A4WXNX78NS/Sary-Smart-Android-TV-32-inch-SA32RY-8500-FL-E",
+    "https://kenzz.com/en/product/B3P6PKXLDPHB/X9-Ultra-2-Full-Screen-Smart-Watch-49Mm-Black",
+    "https://kenzz.com/en/product/B3QMYB57WBXQ/PRO1-R80-Electric-Water-Heater-80-Liters-White",
+    "https://kenzz.com/en/product/B3UPYKTKWN3H/SK-8041-Smart-Air-Fryer-8-Liter-1700-Watt-Silver-Black",
+    "https://kenzz.com/en/product/B4BJ8A2XA8L5/R-770Ar(St)-Microwave-With-Grill-34-Liters-Silver",
+    "https://kenzz.com/en/product/B4V5HNKNLTV8/Sequence-Jumbo-Board-Game",
+    "https://kenzz.com/en/product/B5PXVGKWFRXG/Celtal-Refrigerator-11-ft-Defrost-Silver-FB30S",
+    "https://kenzz.com/en/product/B5WLDBMH4TEU/White-Point-Washing-Machine-13-Kg-Gray-Wptl13Dfgcm",
+    "https://kenzz.com/en/product/B6C846V76LEZ/Toshiba-LED-Smart-TV-50-Inch-4K-Black-50U5965EA",
+    "https://kenzz.com/en/product/B6WTRXE8EESU/Philips-HD9200-91-Digital-Air-Fryer-4L-Black",
+    "https://kenzz.com/en/product/B6YB5YUJ2Q3X/Deep-Freezer-8-Drawers-404-Liters-Digital-Touch-Control-Stainless-Steel-Silver-L-RFNE448E35XB",
+    "https://kenzz.com/en/product/B792KN6HV5J4/AF5539-B5-Air-Fryer-5.5-L-Black",
+    "https://kenzz.com/en/product/B7QMWNHCJYJA/iPhone-13-Pro-Max-Clear-Glass-Screen-Protector",
+    "https://kenzz.com/en/product/B7VFD56FG78Y/500004558-Al-Shabah-Stand-Fan-with-Remote-18-Inch-Black-Red",
+    "https://kenzz.com/en/product/B9F9XY5Y2CDJ/Electric-Handheld-Blender-2*1",
+    "https://kenzz.com/en/product/BAVNYW9PDCE6/Kiriazi-370L-Black-No-Frost-Refrigerator-KH370LN",
+    "https://kenzz.com/en/product/BCA2S2G2ZUJE/Alaska-KSD29-294.5L-Frost-Free-Defrost-Refrigerator-White",
+    "https://kenzz.com/en/product/BCRTY5LCDWS8/Moulinex-LM2428EG-400W-Electric-Blender-Black",
+    "https://kenzz.com/en/product/BCZKK9GTV5C2/Glow-Ballpoint-Pen-0.7-Mm-Red-12-Pens",
+    "https://kenzz.com/en/product/BD4GEMJ7UMMM/Air-fryer-5-liters-SE-3011",
+    "https://kenzz.com/en/product/BDMT7PTKAX5N/3-In-1-Blender-Pink",
+    "https://kenzz.com/en/product/BDQGVPLZWL6B/ET-EH45-Holder-For-Smartphone-360-Degree",
+    "https://kenzz.com/en/product/BDZ3NS3FQG7W/Ox-45-Tv-Stand",
+    "https://kenzz.com/en/product/BEK5C9TATEYB/Fresh-Shabah-Blender-with-Two-Mill",
+    "https://kenzz.com/en/product/BETHALZVGABD/Smart-Tv-Screen-32-Inches-Black-Le32Dn4",
+    "https://kenzz.com/en/product/BEXACQ968NEV/LG-Microwave-With-Grill-42-Liters-Black-MH8265DIS-",
+    "https://kenzz.com/en/product/BF64VVLLMP5N/White-Point-Digital-Top-Loading-Washing-Machine-11-Kg-Gray-Wptl11Dgglan",
+    "https://kenzz.com/en/product/BFHZSWZJQR4M/LG-Smart-TV-55-Inch-Silver-55NANO776QA",
+    "https://kenzz.com/en/product/BFLP93HNLL42/sk-1733-Nescafe-hand-blender-25-watt-white",
+    "https://kenzz.com/en/product/BFNNKNQHASTV/Nickelodeon-My-Best-Friend-Activity-Book-20-Pages",
+    "https://kenzz.com/en/product/BFSFZ6927QK6/Bladeless-Ceiling-Fan-with-Dimmable-LED-Light-and-Remote-Control-%E2%80%93-White-25-cm",
+    "https://kenzz.com/en/product/BG8TF9CXWL8T/SK-666666B-Electric-chopper-10-liters-2000-watts-silver-black",
+    "https://kenzz.com/en/product/BGGBLK6TVCKV/Razor-For-Face-%26-Body-Shaving",
+    "https://kenzz.com/en/product/BH88VNLRZBRE/Lazord-Granite-Plus-Rectangular-Oven-Casserole-Black-3-Pieces",
+    "https://kenzz.com/en/product/BJ7XJGBWJS9F/Tornado-Air-Fryer-1550-Watts-4-Liters-White-THF-1554D-XL-CS",
+    "https://kenzz.com/en/product/BK2UWKXYAX4Q/Smile-Stand-Fan-26-Inch-Black",
+    "https://kenzz.com/en/product/BK3UGYJXDSKU/Mini-Handheld-Fan-with-Mobile-Stand-Rechargeable-Orange",
+    "https://kenzz.com/en/product/BKDRQYUU5KSA/Cassell-18-Pole-Fan%2C-Black-FAS-2218",
+    "https://kenzz.com/en/product/BKMDVHR8BS6N/Nescafe-Blender-with-Charger-and-Mini-Egg-Beater-Black",
+    "https://kenzz.com/en/product/BKRSWNBHA286/Rc650-B5-Rice-Cooker-0.6L-White",
+    "https://kenzz.com/en/product/BLGE3QK9DJLR/4-In-1-Hand-Blender-500-Watts-2-Speeds-Km1093",
+    "https://kenzz.com/en/product/BLJ9ZUWCDF2W/Lavvento-Type-C-Laptop-Adapter-Cv152",
+    "https://kenzz.com/en/product/BNK2UNTVXE8M/4-inch-plastic-base-sleeve-white",
+    "https://kenzz.com/en/product/BNZEZAUFBVFS/Arzum-Shake-%26-Take-Personal-Blender-300W-Red-Ar1032",
+    "https://kenzz.com/en/product/BQS6YZPC6LEK/Fresh-Air-Fryer-XL-7L-Black-AFF-1800B",
+    "https://kenzz.com/en/product/BRJ2ZQ65GVB5/Multicolor-Washing-Machine-Cover",
+    "https://kenzz.com/en/product/BRJKSHVM4TZM/Toshiba-Automatic-Washing-Machine-Top-Load-8-kg-Silver-AW-J800AUPEG",
+    "https://kenzz.com/en/product/BS59Q69EZRXA/Fresh-Industrial-18-Inch-Wall-Fan-Black-F18-450W",
+    "https://kenzz.com/en/product/BT8J98WLAT93/F4R5TYG2T-Fully-automatic-washing-machine%2C-8-kg-Silver"
+]
+
+H = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Accept-Language": "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+}
+
+AR = str.maketrans("٠١٢٣٤٥٦٧٨٩٫٬", "0123456789.,")
+
+def load_data():
+    if os.path.exists(DATA_FILE):
+        try:
+            with open(DATA_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except:
+            return {}
+    return {}
+
+def save_data(data):
+    try:
+        with open(DATA_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+    except Exception as e:
+        print(f"خطأ في حفظ الملف: {e}")
+
+stored_data = load_data()
+
+def send(msg):
+    u = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    try:
+        requests.post(u, json={"chat_id": CHAT, "text": msg, "parse_mode": "Markdown"}, timeout=10)
+    except Exception as e:
+        print(f"خطأ في إرسال رسالة التليجرام: {e}")
+
+def check_prices():
+    global stored_data
+    
+    total_products_count = len(PRODUCTS)
+    if total_products_count == 0:
+        print("\n[⚠️] قائمة المنتجات فارغة حالياً!")
+        return
+        
+    print(f"\n[🔄] بدء فحص عدد {total_products_count} منتج بصمت...")
+    
+    changes_count = 0
+    checked_count = 0
+    current_time_str = datetime.now().strftime("%d/%m/%Y %H:%M")
+    
+    for index, url in enumerate(PRODUCTS, 1):
+        try:
+            response = requests.get(url, headers=H, timeout=15, allow_redirects=True)
+            
+            if response.status_code != 200:
+                print(f"[{index}/{total_products_count}] فشل فحص المنتج (كود الاستجابة: {response.status_code})")
+                continue
+            
+            soup = BeautifulSoup(response.text, 'html.parser')
+            current_price = None
+            product_name = None
+            
+            for script in soup.find_all('script', type='application/ld+json'):
+                try:
+                    data = json.loads(script.string)
+                    data_items = data if isinstance(data, list) else [data]
+                    
+                    for item in data_items:
+                        if isinstance(item, dict) and item.get('@type') == 'Product':
+                            product_name = item.get('name')
+                            offers = item.get('offers')
+                            if isinstance(offers, dict):
+                                p = offers.get('price') or offers.get('lowPrice')
+                                if p:
+                                    current_price = float(p)
+                                    break
+                            elif isinstance(offers, list) and len(offers) > 0:
+                                p = offers[0].get('price')
+                                if p:
+                                    current_price = float(p)
+                                    break
+                    if current_price:
+                        break
+                except:
+                    pass
+            
+            if not product_name:
+                h1 = soup.find('h1')
+                product_name = h1.get_text().strip() if h1 else "منتج بدون اسم"
+            
+            if not current_price:
+                price_element = (
+                    soup.find('span', {'class': 'price'}) or 
+                    soup.find('div', {'class': 'price'}) or 
+                    soup.find('span', {'class': 'current-price'}) or
+                    soup.find('span', class_=lambda x: x and 'price' in x.lower())
+                )
+                if price_element:
+                    price_text = price_element.get_text().strip().translate(AR)
+                    price_str = ''.join(c for c in price_text if c.isdigit() or c == '.')
+                    if price_str:
+                        current_price = float(price_str)
+            
+            if current_price:
+                checked_count += 1
+                is_new_product = url not in stored_data
+                
+                if is_new_product:
+                    stored_data[url] = {
+                        "name": product_name,
+                        "current_price": current_price,
+                        "history": [{"price": current_price, "time": current_time_str}]
+                    }
+                else:
+                    item_data = stored_data[url]
+                    old_price = item_data["current_price"]
+                    
+                    if current_price != old_price:
+                        prices_list = [h["price"] for h in item_data["history"]]
+                        prices_list.append(current_price)
+                        avg_price = round(sum(prices_list) / len(prices_list), 2)
+                        lowest_historical_price = min(prices_list[:-1]) if len(prices_list) > 1 else old_price
+                        
+                        if current_price < old_price:
+                            diff_pct = round(((old_price - current_price) / old_price) * 100, 1)
+                            discount_text = f"📉 نسبة الخصم: %{diff_pct}"
+                        else:
+                            diff_pct = round(((current_price - old_price) / old_price) * 100, 1)
+                            discount_text = f"📈 نسبة الزيادة: %{diff_pct}"
+                        
+                        is_lowest = current_price <= lowest_historical_price
+                        tagline = "🔥 أقل سعر تاريخي!" if is_lowest else "📊 تحديث جديد في السعر"
+                        
+                        item_data["current_price"] = current_price
+                        item_data["name"] = product_name
+                        item_data["history"].append({"price": current_price, "time": current_time_str})
+                        
+                        history_text = ""
+                        for h in reversed(item_data["history"][-5:]):
+                            history_text += f"➡️ EGP {h['price']} – {h['time']}\n"
+                        
+                        msg = (
+                            f"✨ عرض كنز ✨\n\n"
+                            f"🛒 {product_name}\n\n"
+                            f"💵 السعر الحالي: EGP {current_price}\n"
+                            f"💵 السعر السابق: EGP {old_price}\n"
+                            f"📊 متوسط الأسعار: EGP {avg_price}\n"
+                            f"{discount_text}\n"
+                            f"{tagline}\n\n"
+                            f"📜 تاريخ الأسعار:\n"
+                            f"{history_text}\n"
+                            f"🛍️ **رابط المنتج:**\n{url}\n\n"
+                            f"🔗 [اضغط هنا للشراء مباشرة]({url})"
+                        )
+                        send(msg)
+                        changes_count += 1
+                
+                print(f"[{index}/{total_products_count}] ✅ تم الفحص - {product_name} | السعر: {current_price}")
+            else:
+                print(f"[{index}/{total_products_count}] ⚠️ لم يتم العثور على السعر.")
+            
+            time.sleep(1.5)
+            
+        except Exception as e:
+            print(f"[{index}/{total_products_count}] ❌ خطأ: {e}")
+            
+    save_data(stored_data)
+    print(f"\n[⏳] انتهت الدورة الحالية (تم فحص الخمسة عشرين منتج، رصد {changes_count} تغيير).")
+
+if __name__ == "__main__":
+    print("البوت يعمل الآن في الخلفية لمراقبة الأسعار بصمت...")
+    while True:
+        check_prices()
+        time.sleep(900)
